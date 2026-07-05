@@ -38,9 +38,5 @@ Run the executable.
 Enter a password
 
 View the password strength and suggestions.
-
-
-****AUTHOR****
-   NANDHITHA M
 👩‍💻 Author
 Nandhitha M
