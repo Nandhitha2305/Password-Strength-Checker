@@ -7,29 +7,40 @@ This project is a simple Password Strength Checker developed using C++. It analy
 
 **Features**
 Checks password length
+
 Detects uppercase letters
+
 Detects lowercase letters
+
 Detects numbers
+
 Detects special characters
+
 Displays password strength
+
 Gives suggestions to improve weak passwords
 
 
 
 **Technologies Used**
+
 C++
+
 Standard Library (STL)
 
 
 => How to Run
+
 Compile the code using a C++ compiler.
+
 Run the executable.
-Enter a password.
+
+Enter a password
+
 View the password strength and suggestions.
 
 
 ****AUTHOR****
    NANDHITHA M
-File-based password analysis
 👩‍💻 Author
 Nandhitha M
