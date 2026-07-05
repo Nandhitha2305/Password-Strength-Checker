@@ -1,0 +1,71 @@
+#include<iostream>
+#include<string>
+#include<cctype>
+using namespace std;
+int main()
+{
+    string password;
+    bool hasupper=false,haslower=false;
+    bool hasdigit=false,hasspecial=false;
+    cout<<"====PASSWORD STRENGTH CHECKER====";
+    cout<<"Enter the password";
+    cin>>password;
+    if(password.length()>=8)
+    {
+        cout<<"The password length is good ";
+    }
+    else
+    {
+        cout<<"The password length must be >= 8";
+    }
+    for(char ch:password)
+    {
+        if(isupper(ch))
+        hasupper=true;
+        else if(islower(ch))
+        haslower=true;
+        else if(isdigit(ch))
+        hasdigit=true;
+        else
+        hasspecial=true;
+    }
+    int score=0;
+    if(password.length()>=8)
+    score++;
+    if(hasupper)
+    score++;
+    if(haslower)
+    score++;
+    if(hasdigit)
+    score++;
+    if(hasspecial)
+    score++;
+    cout << "\n---------- RESULT ----------\n";
+
+    if (score == 5)
+        cout << "Password Strength: STRONG\n";
+    else if (score >= 3)
+        cout << "Password Strength: MEDIUM\n";
+    else
+        cout << "Password Strength: WEAK\n";
+
+    cout << "\nSuggestions:\n";
+
+    if (password.length() < 8)
+        cout << "- Use at least 8 characters.\n";
+    if (!hasupper)
+        cout << "- Add an uppercase letter.\n";
+    if (!haslower)
+        cout << "- Add a lowercase letter.\n";
+    if (!hasdigit)
+        cout << "- Add a number.\n";
+    if (!hasspecial)
+        cout << "- Add a special character (!,@,#,$,%,etc.).\n";
+
+    if (score == 5)
+        cout << "Excellent! Your password is secure.\n";
+
+    cout << "\n=====================================\n";
+
+    return 0;
+}
